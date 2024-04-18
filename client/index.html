@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+<title>Books and Selections demo</title>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="index.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<body onload="run()" onmousedown="hideError()">
+<div id="errorArea"></div>
+
+<div id="header">
+    <span>Books and Selections demo</span>
+    <span></span>
+</div>
+
+<table class="section books"><tr><td>BOOKS</td><td>
+
+    <div>
+        <button onclick="addBook(BOOK_PUSHKIN)">add BookInSelection by Pushkin</button>
+        <button onclick="addBook(BOOK_LERMONTOV)">add BookInSelection by Lermontov</button>
+        <button onclick="addBook(BOOK_SHEVCHENKO)">add BookInSelection by Shevchenko</button>
+    </div>
+    <p id="bookForm">
+        Add book <input name="title">
+        written by <input name="author">
+        <button onclick="addBookButton()">Add</button>
+    </p>
+    <div id="booksArea"></div>
+    <button onclick="abortRequest()">Abort</button>
+
+</td></tr></table>
+
+<table class="section selections"><tr><td>SELECTIONS</td><td>
+
+    <p id="selectionForm">
+        Add selection <input name="title">
+        created by <input name="author">
+        with email <input name="email">
+        <button onclick="addSelectionButton()">Add</button>
+    </p>
+    <p id="addBookToSelectionForm">
+        Add book
+        <select id="booksSelect" name="bookId"></select>
+        to selection
+        <select id="selectionsSelect" name="selectionId"></select>
+        <button onclick="addBookToSelectionButton()">Add</button>
+    </p>
+
+    <div id="selectionsArea"></div>
+
+</td></tr></table>
+
+</body>

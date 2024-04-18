@@ -1,0 +1,48 @@
+GET http://javaschool1.luxoft.com:4730/questions
+
+###
+GET http://javaschool1.luxoft.com:4730/questions?module=7&part=1
+
+###
+
+POST http://javaschool1.luxoft.com:4730/questions
+Content-Type: application/json
+
+{
+  "module": "2",
+  "part": "5",
+  "number": "9",
+  "question": "Что меняет флаг -XX:UseGCOverheadLimit и чем он полезен?"
+}
+
+###
+
+POST http://javaschool1.luxoft.com:4730/answers?module=1&part=1&number=1
+Content-Type: application/json
+Accept: application/json, text/plain, */*
+Referer: http://localhost:63343/
+
+{
+  "module": "1",
+  "part": "1",
+  "number": "1",
+  "user": "Вася",
+  "answer": "ответ на вопрос4"
+}
+
+###
+
+GET http://javaschool1.luxoft.com:4730/answers?module=2&part=1&number=6
+###
+
+GET http://javaschool1.luxoft.com:4730/answers
+
+###
+
+GET http://javaschool1.luxoft.com:4730/answers/remove?id=616621808f05f0f8f0a367a5
+
+###
+GET http://javaschool1.luxoft.com:4730/questions/remove?id=6167d4597b80944027000017
+
+###
+GET http://javaschool1.luxoft.com:4730/questions/remove
